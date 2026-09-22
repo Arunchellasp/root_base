@@ -1,0 +1,95 @@
+[debug mode]
+main.cpp
+Generating Code...
+Compiling...
+rcore.c
+rshapes.c
+rtext.c
+rtextures.c
+rmodels.c
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(797): warning C4456: declaration of 'x' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(776): note: see declaration of 'x'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(798): warning C4456: declaration of 'y' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(777): note: see declaration of 'y'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(799): warning C4456: declaration of 'z' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(778): note: see declaration of 'z'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(807): warning C4456: declaration of 'x' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(776): note: see declaration of 'x'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(808): warning C4456: declaration of 'y' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(777): note: see declaration of 'y'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(809): warning C4456: declaration of 'z' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(778): note: see declaration of 'z'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1327): warning C4456: declaration of 'turtle' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1303): note: see declaration of 'turtle'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1336): warning C4456: declaration of 'cmd' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1230): note: see declaration of 'cmd'
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1430): warning C4456: declaration of 'index' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\par_shapes.h(1418): note: see declaration of 'index'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4874): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4892): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4910): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4927): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4944): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4963): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(4860): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(6588): warning C4456: declaration of 'result' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(6500): note: see declaration of 'result'
+D:\code\dev_env\code\third_party\raylib\rmodels.c(6871): warning C4389: '!=': signed/unsigned mismatch
+D:\code\dev_env\code\third_party\raylib\rmodels.c(6897): warning C4389: '==': signed/unsigned mismatch
+D:\code\dev_env\code\third_party\raylib\rmodels.c(7141): warning C4456: declaration of 'j' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\rmodels.c(6798): note: see declaration of 'j'
+raudio.c
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(1613): warning C4456: declaration of 'z' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(1601): note: see declaration of 'z'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2143): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2157): warning C4456: declaration of 'z' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2140): note: see declaration of 'z'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2159): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2189): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2203): warning C4456: declaration of 'z' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2186): note: see declaration of 'z'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2205): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2236): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2255): warning C4456: declaration of 'c' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(2109): note: see declaration of 'c'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3223): warning C4456: declaration of 'n' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3183): note: see declaration of 'n'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3231): warning C4456: declaration of 'n' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3183): note: see declaration of 'n'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3331): warning C4456: declaration of 'n2' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3183): note: see declaration of 'n2'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3469): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3458): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3469): warning C4456: declaration of 'j' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3458): note: see declaration of 'j'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3856): warning C4456: declaration of 'values' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3720): note: see declaration of 'values'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3873): warning C4456: declaration of 'len' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3583): note: see declaration of 'len'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(4161): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(3583): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(4411): warning C4456: declaration of 'n' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(4355): note: see declaration of 'n'
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(4580): warning C4456: declaration of 'i' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\stb_vorbis.c(4569): note: see declaration of 'i'
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(922): warning C4456: declaration of 'flags' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(815): note: see declaration of 'flags'
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(962): warning C4456: declaration of 'flags' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(815): note: see declaration of 'flags'
+D:\code\dev_env\code\third_party\raylib\raudio.c(1089): warning C4456: declaration of 'result' hides previous local declaration
+D:\code\dev_env\code\third_party\raylib\raudio.c(1070): note: see declaration of 'result'
+rglfw.c
+Generating Code...
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(2248) : warning C4702: unreachable code
+D:\code\dev_env\code\third_party\raylib\external\jar_xm.h(2251) : warning C4702: unreachable code
+D:\code\dev_env\code\third_party\raylib\platforms\rcore_desktop_glfw.c(799) : warning C4702: unreachable code

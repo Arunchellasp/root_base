@@ -12,11 +12,32 @@
 
 #if defined(_WIN32)
 #undef PlaySound
-#endif
+#endif`
 
 #include "googol_tech_init.h"
 
 #include "raylib_inc.h"
+
+
+
+
+typedef enum Split_Direction Split_Direction;
+enum Split_Direction
+{
+    Split_None,
+    Split_vertical,
+    Split_Horizontal
+};
+
+typedef struct Node_Panel Node_Panel;
+struct Node_Panel
+{
+    
+    Rectangles 
+        
+        
+};
+
 
 
 int main(void){
@@ -27,35 +48,36 @@ int main(void){
     const int screenHeight = 450;
     
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-    
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    //ToggleBorderlessWindowed();
+    ToggleBorderl
+        
+        SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
     
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
-        // Update
-        //----------------------------------------------------------------------------------
-        // TODO: Update your variables here
-        //----------------------------------------------------------------------------------
         
-        // Draw
-        //----------------------------------------------------------------------------------
+        
         BeginDrawing();
         
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLACK);
         
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+        
+        DrawRectangle(0,0,screenWidth/2,screenHeight,YELLOW);
+        DrawRectangle(screenWidth/2,0,screenWidth/2,screenHeight,GREEN);
+        
+        
+        
+        //DrawLine(100,100,100,400,BLACK);
+        //DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
         
         EndDrawing();
-        //----------------------------------------------------------------------------------
+        
     }
     
-    // De-Initialization
-    //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
-    //--------------------------------------------------------------------------------------
     
+    CloseWindow();        // Close window and OpenGL context
     
     return 0;
 }

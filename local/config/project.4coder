@@ -13,7 +13,7 @@ patterns = {
 
 blacklist_patterns = {
 	".*",
-	"third_party"
+	
 };
 
 load_paths = {

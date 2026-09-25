@@ -13,7 +13,7 @@ set _build_=build
 set _home_=..
 set third_party=%_home_%\code\third_party
 
-set cl_warnings=/W4 /wd4456 /wd4389 /wd4702 /wd4100 /wd4152 /wd4244 /wd4005 /wd4457 /wd4245                 /wd4701
+set cl_warnings=/W4 /wd4456 /wd4389 /wd4702 /wd4100 /wd4152 /wd4244 /wd4005 /wd4457 /wd4245 /wd4701 /wd4471
 
 
 set cl_libs=/I%_home_%\code\ /I%third_party% /I%third_party%\googol_tech /I%third_party%\raylib /I%third_party%\raylib\external\glfw\include

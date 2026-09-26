@@ -22,7 +22,10 @@ struct Panel_Rectangle
     r32 y;
     r32 width;
     r32 height;
-    
+    unsigned char r;
+    unsigned char g;
+    unsigned char b;
+    unsigned char a;
     
 };
 
@@ -42,7 +45,7 @@ struct Node_Panel
 
 
 internal void
-shape_rectangle(Panel_Rectangle *rect,Color color)
+draw_rectangle(Panel_Rectangle *rect,Color color)
 {
     
     DrawRectangle(rect->x,rect->y,rect->width,rect->height,color);

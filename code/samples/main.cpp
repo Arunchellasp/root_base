@@ -73,9 +73,9 @@ int main()
     {
         BeginDrawing();
         
-        ClearBackground({20, 20, 24, 255});
+        ClearBackground(BLUE);
         
-        shape_rectangle(&mm->rect,RED);
+        draw_rectangle(&mm->rect,GREEN);
         
         
         

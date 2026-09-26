@@ -23,6 +23,7 @@ struct Panel_Rectangle
     r32 width;
     r32 height;
     
+    
 };
 
 
@@ -38,6 +39,15 @@ struct Node_Panel
     Node_Panel *first;
     Node_Panel *Second;
 };
+
+
+internal void
+shape_rectangle(Panel_Rectangle *rect,Color color)
+{
+    
+    DrawRectangle(rect->x,rect->y,rect->width,rect->height,color);
+    
+}
 
 
 #endif //UI_CORE_H

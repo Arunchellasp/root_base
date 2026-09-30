@@ -31,10 +31,10 @@ struct MM_State
     Node_Panel panel_1;
     Node_Panel panel_2;
     Node_Panel panel_3;
+    Vector2 mouse;
+    
     r32 rander_width;
     r32 rander_height;
-    
-    
 };
 
 
@@ -100,7 +100,7 @@ int main()
     
     mm_init();
     
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_WINDOW_UNDECORATED);
     InitWindow(WIDTH, HEIGHT, "Adaptive Binary Panel Tree");
     
     
@@ -115,6 +115,9 @@ int main()
         
         ClearBackground(BLUE);
         
+        
+        
+        
         mm->rander_width = GetRenderWidth();
         mm->rander_height = GetRenderHeight();
         
@@ -122,9 +125,12 @@ int main()
         mm->rect_p.width = GetScreenWidth() - 5;
         mm->rect_p.height = GetScreenHeight() - 5;
         
+        mm->mouse = GetMousePosition();
+        
+        
         mm->rect_r.x = mm->rect_p.x;
         mm->rect_r.y = mm->rect_p.y;
-        mm->rect_r.width = (mm->rect_p.width + 5 ) /2;
+        mm->rect_r.width = (mm->rect_p.width + 2.5 ) /2;
         mm->rect_r.height= mm->rect_p.height;
         
         mm->rect_l.x = mm->rect_r.width;
@@ -133,10 +139,21 @@ int main()
         mm->rect_l.height= mm->rect_p.height;
         
         
+        
         mm_defualt_window(&mm->panel_1);
         mm_defualt_window(&mm->panel_2);
         mm_defualt_window(&mm->panel_3);
         
+        DrawRectangle(0, 0, GetScreenWidth(), 40, DARKGRAY);
+        
+        DrawText("My App", 15, 10, 20, WHITE);
+        
+        DrawText("-", 1100, 10, 20, WHITE);
+        DrawText("□", 1130, 10, 20, WHITE);
+        DrawText("X", 1160, 10, 20, WHITE);
+        
+        
+        DrawText(TextFormat("X:%.0fY:%.0f",mm->mouse.x,mm->mouse.y),50,50,18,BLACK);
         
         EndDrawing();
     }

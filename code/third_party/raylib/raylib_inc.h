@@ -4,5 +4,6 @@
 #define RAYLIB_INC_H
 
 #include "raylib.h"
+#include "raygui.h"
 
 #endif //RAYLIB_INC_H

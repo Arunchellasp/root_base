@@ -5,6 +5,12 @@
 
 // NOTE(ARUN): @panel_struct 
 
+
+
+#define BACK_COLOR   CLITERAL(Color){ 216, 214, 217, 255 }   // My own White (raylib logo)
+#define MY_COLOR   CLITERAL(Color){ 97, 1, 238, 255 }   // My own White (raylib logo)
+
+
 typedef enum Split_Direction Split_Direction;
 enum Split_Direction
 {
@@ -65,29 +71,31 @@ mm_panel(MM_Panel *panel, Texture2D icon, Font font)
     
     DrawRectangleRoundedLinesEx(
                                 rect,
-                                1.0f,
-                                10,
-                                10.0f,
+                                30.0f,
+                                0,
+                                3.0f,
                                 panel->color
                                 );
     
-    // Icon
-    DrawTextureEx(
-                  icon,
-                  Vector2{ panel->x + 30, panel->y + 25 },
-                  0.0f,
-                  0.5f,
-                  WHITE
-                  );
+    /* 
+        // Icon
+        DrawTextureEx(
+                      icon,
+                      Vector2{ panel->x + 30, panel->y + 25 },
+                      0.0f,
+                      1.0f,
+                      WHITE
+                      );
+         */
     
     // Text
     DrawTextEx(
                font,
-               "Arun",
-               Vector2{ panel->x + 100, panel->y + 25 },
-               50.0f,
+               "ADD",
+               Vector2{79,26},
+               40.0f,
                1.0f,
-               RED
+               BACK_COLOR
                );
 }
 

@@ -30,7 +30,7 @@ struct MM_State
     Node_Panel panel_3;
     
     Vector2 mouse;
-    
+    Color color;
     Rectangle bounds;
     Rectangle bounds_1;
     
@@ -58,14 +58,22 @@ mm_init(void)
     
     mm->arena = arena;
     
-    mm->rect_p.x = 50;
-    mm->rect_p.y = 50;
-    mm->rect_p.width = 300 ;
-    mm->rect_p.height = 100;
-    mm->rect_p.color = GREEN;
+    mm->rect_p.x = 16;
+    mm->rect_p.y = 22;
+    mm->rect_p.width = 160;
+    mm->rect_p.height = 50;
+    mm->rect_p.color = BACK_COLOR;;
+    
+    mm->rect_r.x = 20;
+    mm->rect_r.y = 20;
+    mm->rect_r.width = 400;
+    mm->rect_r.height = 200;
+    mm->rect_r.color = RAYWHITE;
+    
+    
     
     mm->icons = LoadTexture("assets/icons/test.png");
-    mm->font =  LoadFont("assets/fonts/Inter_28pt-Italic.ttf");
+    mm->font =  LoadFont("assets/fonts/Inter_28pt-ExtraBoldItalic.ttf");
     
     
     
@@ -95,7 +103,9 @@ main(void)
         
         BeginDrawing();
         
-        ClearBackground(GetColor(0x202020FF));
+        ClearBackground(BACK_COLOR);
+        
+        DrawRectangle(0,0,200,100,MY_COLOR);
         
         mm_panel(&mm->rect_p,mm->icons,mm->font);
         

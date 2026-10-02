@@ -60,9 +60,9 @@ mm_init(void)
     
     mm->rect_p.x = 16;
     mm->rect_p.y = 22;
-    mm->rect_p.width = 160;
-    mm->rect_p.height = 50;
-    mm->rect_p.color = BACK_COLOR;;
+    mm->rect_p.width = 300;
+    mm->rect_p.height = 90;
+    mm->rect_p.color = BACK_COLOR;
     
     mm->rect_r.x = 20;
     mm->rect_r.y = 20;
@@ -72,7 +72,7 @@ mm_init(void)
     
     
     
-    mm->icons = LoadTexture("assets/icons/test.png");
+    mm->icons = LoadTexture("assets/icons/pluse.png");
     mm->font =  LoadFont("assets/fonts/Inter_28pt-ExtraBoldItalic.ttf");
     
     
@@ -105,9 +105,9 @@ main(void)
         
         ClearBackground(BACK_COLOR);
         
-        DrawRectangle(0,0,200,100,MY_COLOR);
+        DrawRectangle(0,0,500,500,MY_COLOR);
         
-        mm_panel(&mm->rect_p,mm->icons,mm->font);
+        mm_button(&mm->rect_p,mm->icons,mm->font,"DEEPSHIKHA");
         
         EndDrawing();
     }

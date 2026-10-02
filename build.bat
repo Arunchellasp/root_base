@@ -13,10 +13,10 @@ set _build_=build
 set _home_=..
 set third_party=%_home_%\code\third_party
 
-set cl_warnings=/W4 /wd4456 /wd4389 /wd4702 /wd4100 /wd4152 /wd4244 /wd4005 /wd4457 /wd4245 /wd4701 /wd4471 /wd4505
+set cl_warnings=/W4 /wd4456 /wd4389 /wd4702 /wd4100 /wd4152 /wd4244 /wd4005 /wd4457 /wd4245 /wd4701 /wd4471 /wd4505 /wd4031 /wd4028 /wd4838
 
 
-set cl_libs=/I%_home_%\code\ /I%third_party% /I%third_party%\googol_tech /I%third_party%\raylib /I%third_party%\raylib\external\glfw\include
+set cl_libs=/I%_home_%\code\ /I%third_party% /I%third_party%\googol_tech /I%third_party%\raylib /I%third_party%\raylib\external\glfw\include /I%assets%\fonts /I%assets%\icons
 
 set cl_common=/nologo /MT /EHsc /FC /Z7 /Oi /std:c++20 /Zc:strictStrings- /D_CRT_SECURE_NO_WARNINGS /DPLATFORM_DESKTOP %cl_warnings% %cl_libs%
 
@@ -28,7 +28,7 @@ if "%debug%"=="1" (
 
 set compile_link=/link /IGNORE:4099 /SUBSYSTEM:console /ENTRY:mainCRTStartup /NODEFAULTLIB:MSVCRT /NODEFAULTLIB:LIBCMTD /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib /incremental:no %third_party%\googol_tech\gts.lib %third_party%\googol_tech\ExtMdl.lib opengl32.lib gdi32.lib shell32.lib winmm.lib dwmapi.lib user32.lib advapi32.lib ole32.lib oleaut32.lib
 
-::%third_party%\glfw-3.4\src\Release\glfw3.lib
+
 
 if not exist "%_build_%" mkdir "%_build_%"
 

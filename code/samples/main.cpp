@@ -58,8 +58,8 @@ mm_init(void)
     
     mm->arena = arena;
     
-    mm->rect_p.x = 16;
-    mm->rect_p.y = 22;
+    mm->rect_p.x = 50;
+    mm->rect_p.y = 50;
     mm->rect_p.width = 300;
     mm->rect_p.height = 90;
     mm->rect_p.color = BACK_COLOR;
@@ -100,12 +100,16 @@ main(void)
     while (!WindowShouldClose())
     {
         mm->mouse = GetMousePosition();
+        mm->rect_p.width = GetScreenWidth()-100;
+        mm->rect_p.height = GetScreenHeight()-100;
         
         BeginDrawing();
         
-        ClearBackground(BACK_COLOR);
+        ClearBackground(ORANGE);
         
-        DrawRectangle(0,0,500,500,MY_COLOR);
+        
+        
+        DrawRectangle(0,0,GetScreenWidth(),GetScreenHeight(),ORANGE);
         
         mm_button(&mm->rect_p,mm->icons,mm->font,"DEEPSHIKHA");
         

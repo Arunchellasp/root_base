@@ -152,13 +152,19 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     // ------------------------------------------------------------
     // Calculate icon size
     //
-    // Preserve the original PNG aspect ratio.
+    // Preserve original PNG aspect ratio.
     // ------------------------------------------------------------
     
     r32 icon_height = panel->height * icon_height_ratio;
     
-    r32 icon_aspect =
-    (r32)icon.width / (r32)icon.height;
+    r32 icon_aspect = 1.0f;
+    
+    if (icon.height > 0)
+    {
+        icon_aspect =
+        (r32)icon.width /
+        (r32)icon.height;
+    }
     
     r32 icon_width = icon_height * icon_aspect;
     
@@ -169,7 +175,7 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     r32 gap = panel->width * gap_ratio;
     
     // ------------------------------------------------------------
-    // Total width of icon + gap + text
+    // Total content width
     // ------------------------------------------------------------
     
     r32 content_width =
@@ -178,20 +184,29 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
         text_measure.x;
     
     // ------------------------------------------------------------
-    // Make sure content doesn't exceed the button
+    // Available width
     // ------------------------------------------------------------
     
     r32 available_width =
-        panel->width * (1.0f - horizontal_pad * 2.0f);
+        panel->width *
+    (1.0f - horizontal_pad * 2.0f);
+    
+    // ------------------------------------------------------------
+    // Scale everything down if necessary
+    // ------------------------------------------------------------
     
     if (content_width > available_width)
     {
-        r32 scale = available_width / content_width;
+        r32 scale =
+            available_width /
+            content_width;
         
-        icon_width *= scale;
+        icon_width  *= scale;
         icon_height *= scale;
         
         text_size *= scale;
+        
+        gap *= scale;
         
         text_measure = MeasureTextEx(
                                      font,
@@ -200,8 +215,6 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
                                      1.0f
                                      );
         
-        gap = gap * scale;
-        
         content_width =
             icon_width +
             gap +
@@ -209,7 +222,7 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     }
     
     // ------------------------------------------------------------
-    // Center the complete group horizontally
+    // Center complete group horizontally
     // ------------------------------------------------------------
     
     r32 start_x =
@@ -226,9 +239,6 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     
     // ------------------------------------------------------------
     // Center text vertically
-    //
-    // MeasureTextEx() includes the font's actual glyph bounds,
-    // so use the returned height rather than assuming text_size.
     // ------------------------------------------------------------
     
     r32 text_y =
@@ -237,30 +247,38 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     
     // ------------------------------------------------------------
     // Draw icon
+    //
+    // IMPORTANT:
+    //
+    // The source PNG should be WHITE with transparency.
+    // panel->color is then used as the tint.
     // ------------------------------------------------------------
     
-    Rectangle source = {
-        0,
-        0,
-        (r32)icon.width,
-        (r32)icon.height
-    };
-    
-    Rectangle destination = {
-        start_x,
-        icon_y,
-        icon_width,
-        icon_height
-    };
-    
-    DrawTexturePro(
-                   icon,
-                   source,
-                   destination,
-                   Vector2{0, 0},
-                   0.0f,
-                   panel->color
-                   );
+    if (icon.id != 0 && icon.width > 0 && icon.height > 0)
+    {
+        Rectangle source = {
+            0.0f,
+            0.0f,
+            (r32)icon.width,
+            (r32)icon.height
+        };
+        
+        Rectangle destination = {
+            start_x,
+            icon_y,
+            icon_width,
+            icon_height
+        };
+        
+        DrawTexturePro(
+                       icon,
+                       source,
+                       destination,
+                       Vector2{0.0f, 0.0f},
+                       0.0f,
+                       panel->color
+                       );
+    }
     
     // ------------------------------------------------------------
     // Draw text
@@ -269,7 +287,10 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
     DrawTextEx(
                font,
                text,
-               Vector2{start_x + icon_width + gap, text_y},
+               Vector2{
+                   start_x + icon_width + gap,
+                   text_y
+               },
                text_size,
                1.0f,
                panel->color

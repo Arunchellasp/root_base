@@ -100,18 +100,19 @@ main(void)
     while (!WindowShouldClose())
     {
         mm->mouse = GetMousePosition();
-        mm->rect_p.width = GetScreenWidth()-100;
-        mm->rect_p.height = GetScreenHeight()-100;
+        //mm->rect_p.width = GetScreenWidth()-100;
+        //mm->rect_p.height = GetScreenHeight()-100;
         
         BeginDrawing();
         
         ClearBackground(ORANGE);
         
         
+        DrawRectangle(0,0,GetScreenWidth(),GetScreenHeight(),MY_COLOR);
         
-        DrawRectangle(0,0,GetScreenWidth(),GetScreenHeight(),ORANGE);
+        mm_lable(&mm->rect_p,mm->font);
+        //mm_button(&mm->rect_p,mm->icons,mm->font,"DEEPSHIKHA");
         
-        mm_button(&mm->rect_p,mm->icons,mm->font,"DEEPSHIKHA");
         
         EndDrawing();
     }

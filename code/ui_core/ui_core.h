@@ -58,7 +58,52 @@ struct MM_Button
 };
 
 
+internal void
+mm_lable(MM_Panel *panel,Font font)
+{
+    
+    Rectangle rect = {
+        panel->x,
+        panel->y,
+        panel->width,
+        panel->height
+    };
+    
+    
+    DrawRectangleRounded(
+                         rect,
+                         30.0f,
+                         0,
+                         RED
+                         );
+    
 #if 0
+    DrawRectangleRoundedLinesEx(
+                                rect,
+                                30.0f,
+                                0,
+                                3.0f,
+                                RED
+                                );
+#endif
+    
+    
+    
+    
+    // Text
+    DrawTextEx(
+               font,
+               "ADD",
+               Vector2{69,28},
+               40.0f,
+               1.0f,
+               RED
+               );
+    
+};
+
+
+
 
 internal void
 mm_panel(MM_Panel *panel, Texture2D icon, Font font)
@@ -98,8 +143,6 @@ mm_panel(MM_Panel *panel, Texture2D icon, Font font)
                RED
                );
 }
-#endif
-
 
 internal void
 mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
@@ -297,7 +340,11 @@ mm_button(MM_Panel *panel, Texture2D icon, Font font, const char *text)
                );
 }
 
+
 // NOTE(ARUN): @button_function
+
+
+
 
 
 #endif //UI_CORE_H
